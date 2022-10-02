@@ -1,8 +1,7 @@
 import GameSavingLoader from './GameSavingLoader.js';
 
-GameSavingLoader.load()
+export default GameSavingLoader.load()
   .then((saving) => {
-    // console.log(saving)
     console.log(saving);
   })
   .catch((err) => {
