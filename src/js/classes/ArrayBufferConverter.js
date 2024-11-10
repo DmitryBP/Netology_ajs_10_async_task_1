@@ -15,6 +15,7 @@ export default class ArrayBufferConverter {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 function getBuffer() {
   const data = '{"data":{"user":{"id":1,"name":"Hitman","level":10}}}';
   return (input => {
@@ -26,9 +27,3 @@ function getBuffer() {
     return buffer;
   })(data);
 }
-
-const converter = new ArrayBufferConverter();
-const buffer = getBuffer();
-converter.load(buffer);
-const jsonString = converter.toString();
-console.log(jsonString); // Вывод: {"data":{"user":{"id":1,"name":"Hitman","level":10}}}
